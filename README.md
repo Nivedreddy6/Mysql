@@ -1,3 +1,140 @@
+Bookstore Management System
+
+• Project Overview
+
+  • Developed a Bookstore Management System using MySQL.
+  • Designed a relational database to manage books, authors, genres, customers, and orders.
+  • Demonstrates database design, normalization, SQL queries, and relationships.
+  • Suitable for academic projects, interview preparation, and GitHub portfolios.
+
+• Features
+
+  • Author Management
+  • Book Management
+  • Genre Management
+  • Customer Management
+  • Order Management
+  • Order Details Management
+  • Primary Key and Foreign Key Relationships
+  • One-to-Many Relationships
+  • Data Integrity using Constraints
+  • Sample Data Population
+  • ER Diagram
+  • Beginner to Advanced SQL Queries
+
+• Technologies Used
+
+  • MySQL 8.x
+  • SQL
+  • MySQL Workbench
+  • Git
+  • GitHub
+
+• Database Name
+
+  • bookstore_db
+
+• Database Tables
+
+  • Authors
+  • Genres
+  • Customers
+  • Books
+  • Orders
+  • Order_Details
+
+• Table Description
+
+  • Authors – Stores author information.
+  • Genres – Stores book categories.
+  • Customers – Stores customer information.
+  • Books – Stores book details including author and genre.
+  • Orders – Stores customer purchase information.
+  • Order_Details – Stores ordered books, quantity, and purchase price.
+
+• Relationships
+
+  • One Author can write many Books.
+  • One Genre can contain many Books.
+  • One Customer can place many Orders.
+  • One Order can contain many Order Details.
+  • One Book can appear in many Order Details.
+
+• SQL Concepts Covered
+
+  • CREATE DATABASE
+  • CREATE TABLE
+  • INSERT
+  • UPDATE
+  • DELETE
+  • SELECT
+  • WHERE
+  • ORDER BY
+  • GROUP BY
+  • HAVING
+  • LIMIT
+  • COUNT()
+  • SUM()
+  • AVG()
+  • MIN()
+  • MAX()
+  • INNER JOIN
+  • LEFT JOIN
+  • RIGHT JOIN
+  • Subqueries
+
+• Sample Queries
+
+  • Display books below a specified price.
+  • Find customer email addresses.
+  • Display books with author names.
+  • Find books by genre.
+  • Count customers by city.
+  • Show the most expensive book.
+  • Calculate the total amount spent by a customer.
+  • Find the genre with the highest stock.
+  • Display monthly orders.
+  • Find books that have never been ordered.
+  • Calculate total books sold per author.
+  • Find the customer with the highest number of orders.
+  • Display the best-selling book.
+
+• Learning Outcomes
+
+  • Relational Database Design
+  • Entity Relationship Modeling
+  • SQL Programming
+  • Database Normalization
+  • Joins and Relationships
+  • Aggregate Functions
+  • Query Optimization
+  • Data Integrity
+
+• Future Enhancements
+
+  • User Authentication
+  • Inventory Management
+  • Payment Module
+  • Invoice Generation
+  • Supplier Management
+  • Sales Dashboard
+  • Stored Procedures
+  • Triggers
+  • Views
+  • Backup and Recovery
+
+• Project Structure
+
+  • README.md
+  • bookstore.sql
+  • queries.sql
+  • ER_Diagram.png
+  • screenshots/
+  • LICENSE
+
+
+
+
 CRM System – MySQL Database Project
 ------------------------------------
 
