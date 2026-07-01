@@ -1,6 +1,6 @@
 Bookstore Management System
 --------------------------
-• Project Overview
+Project Overview
 
   • Developed a Bookstore Management System using MySQL.
   • Designed a relational database to manage books, authors, genres, customers, and orders.
