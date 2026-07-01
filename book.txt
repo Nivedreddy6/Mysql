@@ -222,9 +222,6 @@ mysql> SELECT * FROM Books WHERE price < 300;
 +---------+--------------------+--------+----------------+-----------+----------+
 2 rows in set (0.00 sec)
 
-mysql> #2. Find the email address of ?Vihaan Reddy?.
-mysql> SELECT email FROM Customers WHERE name=?Vihaan Reddy?;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?Vihaan Reddy?' at line 1
 mysql> SELECT email
     -> FROM Customers
     -> WHERE name = 'Vihaan Reddy';
