@@ -1,5 +1,5 @@
 Bookstore Management System
-
+--------------------------
 • Project Overview
 
   • Developed a Bookstore Management System using MySQL.
