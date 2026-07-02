@@ -3,7 +3,7 @@ Query OK, 1 row affected (0.02 sec)
 
 mysql> USE CRM_SYSTEM;
 Database changed
-mysql> 
+ 
 mysql> #Admin
 mysql> CREATE TABLE Admin (
     ->     admin_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -13,7 +13,7 @@ mysql> CREATE TABLE Admin (
     -> );
 Query OK, 0 rows affected (0.13 sec)
 
-mysql> 
+ 
 mysql> #CRM
 mysql> CREATE TABLE CRM (
     ->     crm_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -23,7 +23,7 @@ mysql> CREATE TABLE CRM (
     -> );
 Query OK, 0 rows affected (0.12 sec)
 
-mysql> 
+ 
 mysql> #Employee
 mysql> CREATE TABLE Employee (
     ->     employee_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -38,7 +38,7 @@ mysql> CREATE TABLE Employee (
     -> );
 Query OK, 0 rows affected (0.06 sec)
 
-mysql> 
+ 
 mysql> #Customer
 mysql> CREATE TABLE Customer (
     ->     customer_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -53,7 +53,7 @@ mysql> CREATE TABLE Customer (
     -> );
 Query OK, 0 rows affected (0.03 sec)
 
-mysql> 
+ 
 mysql> #Orders
 mysql> CREATE TABLE Orders (
     ->     order_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -71,7 +71,7 @@ mysql> CREATE TABLE Orders (
     -> );
 Query OK, 0 rows affected (0.10 sec)
 
-mysql> 
+ 
 mysql> #Services
 mysql> CREATE TABLE Services (
     ->     service_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -85,7 +85,7 @@ mysql> CREATE TABLE Services (
     -> );
 Query OK, 0 rows affected (0.06 sec)
 
-mysql> 
+ 
 mysql> #Product
 mysql> CREATE TABLE Product (
     ->     product_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -95,7 +95,7 @@ mysql> CREATE TABLE Product (
     -> );
 Query OK, 0 rows affected (0.02 sec)
 
-mysql> 
+ 
 mysql> #Order_Product (Many-to-Many)
 mysql> CREATE TABLE Order_Product (
     -> 
@@ -113,7 +113,7 @@ mysql> CREATE TABLE Order_Product (
     -> );
 Query OK, 0 rows affected (0.23 sec)
 
-mysql> 
+ 
 mysql> #Service_Product (Many-to-Many)
 mysql> CREATE TABLE Service_Product (
     -> 
@@ -130,9 +130,8 @@ mysql> CREATE TABLE Service_Product (
     -> );
 Query OK, 0 rows affected (0.16 sec)
 
-mysql> 
-mysql> #Admin 
-mysql> 
+ 
+mysql> #Admin  
 mysql> INSERT INTO Admin(name,email,password) VALUES
     -> ('John Smith','john@gmail.com','john@123'),
     -> ('Alice Brown','alice@gmail.com','alice@123'),
@@ -157,9 +156,8 @@ mysql> INSERT INTO Admin(name,email,password) VALUES
 Query OK, 20 rows affected (0.01 sec)
 Records: 20  Duplicates: 0  Warnings: 0
 
-mysql> 
-mysql> #CRM
-mysql> 
+ 
+mysql> #CRM 
 mysql> INSERT INTO CRM(crm_name,admin_id) VALUES
     -> ('Sales CRM',1),
     -> ('Marketing CRM',2),
@@ -184,9 +182,8 @@ mysql> INSERT INTO CRM(crm_name,admin_id) VALUES
 Query OK, 20 rows affected (0.00 sec)
 Records: 20  Duplicates: 0  Warnings: 0
 
-mysql> 
-mysql> #Employee
-mysql> 
+ 
+mysql> #Employee 
 mysql> INSERT INTO Employee(admin_id,name,email,dept,phone) VALUES
     -> (1,'Rahul','rahul@gmail.com','Sales','9876543210'),
     -> (1,'Anjali','anjali@gmail.com','HR','9876543211'),
@@ -211,9 +208,8 @@ mysql> INSERT INTO Employee(admin_id,name,email,dept,phone) VALUES
 Query OK, 20 rows affected (0.01 sec)
 Records: 20  Duplicates: 0  Warnings: 0
 
-mysql> 
-mysql> #Customer
-mysql> 
+ 
+mysql> #Customer 
 mysql> INSERT INTO Customer(employee_id,name,email,phone,address) VALUES
     -> (1,'Amit','amit@gmail.com','9000011111','Hyderabad'),
     -> (2,'Neha','neha@gmail.com','9000011112','Chennai'),
@@ -238,9 +234,8 @@ mysql> INSERT INTO Customer(employee_id,name,email,phone,address) VALUES
 Query OK, 20 rows affected (0.00 sec)
 Records: 20  Duplicates: 0  Warnings: 0
 
-mysql> 
-mysql> #Product
-mysql> 
+ 
+mysql> #Product 
 mysql> INSERT INTO Product(product_name,description,price) VALUES
     -> ('Laptop','Dell Laptop',65000),
     -> ('Mouse','Wireless Mouse',900),
@@ -265,9 +260,8 @@ mysql> INSERT INTO Product(product_name,description,price) VALUES
 Query OK, 20 rows affected (0.01 sec)
 Records: 20  Duplicates: 0  Warnings: 0
 
-mysql> 
-mysql> #orders
-mysql> 
+ 
+mysql> #orders 
 mysql> INSERT INTO Orders(customer_id, employee_id, order_date, status, amount) VALUES
     -> (1,1,'2026-01-05','Delivered',65000.00),
     -> (2,2,'2026-01-08','Pending',12000.00),
@@ -292,9 +286,8 @@ mysql> INSERT INTO Orders(customer_id, employee_id, order_date, status, amount) 
 Query OK, 20 rows affected (0.00 sec)
 Records: 20  Duplicates: 0  Warnings: 0
 
-mysql> 
-mysql> #Services
-mysql> 
+ 
+mysql> #Services 
 mysql> INSERT INTO Services(customer_id, service_name, description, price) VALUES
     -> (1,'Installation','Laptop Installation',1500.00),
     -> (2,'Repair','Printer Repair',2500.00),
@@ -319,9 +312,8 @@ mysql> INSERT INTO Services(customer_id, service_name, description, price) VALUE
 Query OK, 20 rows affected (0.00 sec)
 Records: 20  Duplicates: 0  Warnings: 0
 
-mysql> 
+ 
 mysql> #Order_Product
-mysql> 
 mysql> INSERT INTO Order_Product(order_id, product_id, quantity) VALUES
     -> (1,1,1),
     -> (2,4,1),
@@ -346,9 +338,8 @@ mysql> INSERT INTO Order_Product(order_id, product_id, quantity) VALUES
 Query OK, 20 rows affected (0.00 sec)
 Records: 20  Duplicates: 0  Warnings: 0
 
-mysql> 
+ 
 mysql> #Service_Product
-mysql> 
 mysql> INSERT INTO Service_Product(service_id, product_id) VALUES
     -> (1,1),
     -> (2,5),
@@ -372,8 +363,7 @@ mysql> INSERT INTO Service_Product(service_id, product_id) VALUES
     -> (20,20);
 Query OK, 20 rows affected (0.00 sec)
 Records: 20  Duplicates: 0  Warnings: 0
-
-mysql> 
+ 
 mysql> #Display all customers.
 mysql> SELECT * FROM Customer;
 +-------------+-------------+---------+-------------------+------------+-----------+
@@ -401,8 +391,7 @@ mysql> SELECT * FROM Customer;
 |          20 |          20 | Sai     | sai@gmail.com     | 9000011130 | Delhi     |
 +-------------+-------------+---------+-------------------+------------+-----------+
 20 rows in set (0.00 sec)
-
-mysql> 
+ 
 mysql> #Display employee names and departments.
 mysql> SELECT name, dept
     -> FROM Employee;
@@ -432,7 +421,7 @@ mysql> SELECT name, dept
 +---------+-----------+
 20 rows in set (0.00 sec)
 
-mysql> 
+ 
 mysql> #Find orders with amount greater than ?10,000.
 mysql> SELECT *
     -> FROM Orders
@@ -449,8 +438,7 @@ mysql> SELECT *
 |       20 |          20 |          20 | 2026-02-20 | Delivered |  70000.00 |
 +----------+-------------+-------------+------------+-----------+-----------+
 7 rows in set (0.00 sec)
-
-mysql> 
+ 
 mysql> #Display customer name and employee name.
 mysql> SELECT
     ->     c.customer_id,
@@ -484,8 +472,7 @@ mysql> SELECT
 |          20 | Sai           | Harsha        |
 +-------------+---------------+---------------+
 20 rows in set (0.00 sec)
-
-mysql> 
+ 
 mysql> #Count customers handled by each employee.
 mysql> SELECT
     ->     e.employee_id,
@@ -532,7 +519,6 @@ mysql> SELECT MAX(amount) AS highest_order
 +---------------+
 1 row in set (0.00 sec)
 
-mysql> 
 mysql> #Display products ordered by customers.
 mysql> SELECT
     ->     o.order_id,
@@ -569,8 +555,7 @@ mysql> SELECT
 |       20 | Graphics Card |        1 |  70000.00 |
 +----------+---------------+----------+-----------+
 20 rows in set (0.00 sec)
-
-mysql> 
+ 
 mysql> #Find customers who never placed an order.
 mysql> SELECT
     ->     c.customer_id,
@@ -580,8 +565,7 @@ mysql> SELECT
     -> ON c.customer_id = o.customer_id
     -> WHERE o.order_id IS NULL;
 Empty set (0.00 sec)
-
-mysql> 
+ 
 mysql> #Find the employee who generated the highest sales.
 mysql> SELECT
     ->     e.employee_id,
@@ -599,8 +583,7 @@ mysql> SELECT
 |          18 | Divya |   150000.00 |
 +-------------+-------+-------------+
 1 row in set (0.00 sec)
-
-mysql> 
+ 
 mysql> #Find the top 5 customers by total purchase amount.
 mysql> SELECT
     ->     c.customer_id,
