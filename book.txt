@@ -1,7 +1,7 @@
 mysql> CREATE DATABASE IF NOT EXISTS bookstore_db;
 Query OK, 1 row affected (0.01 sec)
 
-mysql> 
+ 
 mysql> USE bookstore_db;
 Database changed
 mysql> 
@@ -13,7 +13,7 @@ mysql> CREATE TABLE Authors (
     -> );
 Query OK, 0 rows affected (0.05 sec)
 
-mysql> 
+ 
 mysql> -- 2. Genres
 mysql> CREATE TABLE Genres (
     ->     genre_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -21,7 +21,7 @@ mysql> CREATE TABLE Genres (
     -> );
 Query OK, 0 rows affected (0.02 sec)
 
-mysql> 
+ 
 mysql> -- 3. Customers
 mysql> CREATE TABLE Customers (
     ->     customer_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -32,7 +32,7 @@ mysql> CREATE TABLE Customers (
     -> );
 Query OK, 0 rows affected (0.06 sec)
 
-mysql> 
+ 
 mysql> -- 4. Books
 mysql> CREATE TABLE Books (
     ->     book_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -47,7 +47,7 @@ mysql> CREATE TABLE Books (
     -> );
 Query OK, 0 rows affected (0.06 sec)
 
-mysql> 
+ 
 mysql> -- 5. Orders
 mysql> CREATE TABLE Orders (
     ->     order_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -58,7 +58,7 @@ mysql> CREATE TABLE Orders (
     -> );
 Query OK, 0 rows affected (0.05 sec)
 
-mysql> 
+ 
 mysql> -- 6. Order_Details
 mysql> CREATE TABLE Order_Details (
     ->     detail_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -72,7 +72,7 @@ mysql> CREATE TABLE Order_Details (
     -> );
 Query OK, 0 rows affected (0.06 sec)
 
-mysql> 
+ 
 mysql> -- Insert Authors
 mysql> INSERT INTO Authors (author_name, bio) VALUES
     -> ('Chetan Bhagat', 'Indian author known for 5 Point Someone.'),
@@ -82,7 +82,7 @@ mysql> INSERT INTO Authors (author_name, bio) VALUES
 Query OK, 4 rows affected (0.00 sec)
 Records: 4  Duplicates: 0  Warnings: 0
 
-mysql> 
+ 
 mysql> -- Insert Genres
 mysql> INSERT INTO Genres (genre_name) VALUES
     -> ('Fiction'),
@@ -92,7 +92,7 @@ mysql> INSERT INTO Genres (genre_name) VALUES
 Query OK, 4 rows affected (0.01 sec)
 Records: 4  Duplicates: 0  Warnings: 0
 
-mysql> 
+ 
 mysql> -- Insert Books
 mysql> INSERT INTO Books
     -> (title, price, stock_quantity, author_id, genre_id)
@@ -105,7 +105,7 @@ mysql> INSERT INTO Books
 Query OK, 5 rows affected (0.00 sec)
 Records: 5  Duplicates: 0  Warnings: 0
 
-mysql> 
+ 
 mysql> -- Insert Customers
 mysql> INSERT INTO Customers
     -> (name, email, city, join_date)
@@ -117,7 +117,7 @@ mysql> INSERT INTO Customers
 Query OK, 4 rows affected (0.00 sec)
 Records: 4  Duplicates: 0  Warnings: 0
 
-mysql> 
+ 
 mysql> -- Insert Orders
 mysql> INSERT INTO Orders
     -> (order_date, customer_id)
@@ -129,7 +129,7 @@ mysql> INSERT INTO Orders
 Query OK, 4 rows affected (0.00 sec)
 Records: 4  Duplicates: 0  Warnings: 0
 
-mysql> 
+ 
 mysql> -- Insert Order_Details
 mysql> INSERT INTO Order_Details
     -> (order_id, book_id, quantity_ordered, price_at_time_of_order)
@@ -142,7 +142,7 @@ mysql> INSERT INTO Order_Details
 Query OK, 5 rows affected (0.00 sec)
 Records: 5  Duplicates: 0  Warnings: 0
 
-mysql> 
+ 
 mysql> -- Verify Data
 mysql> SELECT * FROM Authors;
 +-----------+----------------+------------------------------------------+
